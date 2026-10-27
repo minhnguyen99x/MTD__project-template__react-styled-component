@@ -1,56 +1,31 @@
-# Create React App example with styled-components & TypeScript
+# React + TypeScript frontend template
 
-The main difference between this and the non-typescript example is that you need to add the following path config to your tsconfig:
+A starter for React apps in TypeScript, with UI, state, forms and translations already wired together.
 
-```json
-"paths": {
-  "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
-}
+## What is included
+
+- **UI:** MUI components rendered through styled-components (`@mui/styled-engine-sc`), global styles and a shared theme
+- **State:** Redux Toolkit with redux-saga middleware for side effects
+- **Translations:** react-intl with English and Vietnamese messages and a language switcher in the header
+- **Routing:** react-router with a shared layout (header, search, footer)
+- **Path aliases:** configured through CRACO
+
+## Structure
+
+```
+src/
+  components/  layout, header (search, language select), footer, product card
+  pages/       Home, Register (form placeholder)
+  store/       Redux store and models
+  services/    API calls
+  locale/      en, vi
+  constants/   routes, theme, locales
+  mock/        sample product data
 ```
 
-and install @types/styled-components:
+## Run
 
-```sh
-npm install --save-dev @types/styled-components
-```
-
-Alternatively, to skip this configuration, you can set `skipLibCheck: true` in your tsconfig.
-
-## How to use
-
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
-
-```sh
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/create-react-app-with-styled-components-typescript
-cd create-react-app-with-styled-components-typescript
-```
-
-Install it and run:
-
-```sh
+```bash
 npm install
 npm start
 ```
-
-## CodeSandbox
-
-<!-- #default-branch-switch -->
-
-Note that CodeSandbox is not supporting react-app-rewired, yet you can [still see the code](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/create-react-app-with-styled-components-typescript).
-
-The following link leverages this demo: https://mui.com/guides/interoperability/#change-the-default-styled-engine with Parcel's alias feature within the `package.json`
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/styled-components-interoperability-w9z9d)
-
-## The idea behind the example
-
-This example demonstrates how you can setup [Create React App](https://github.com/facebookincubator/create-react-app) with [styled-components](https://styled-components.com/) as a style engine for your application using TypeScript.
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation, continuing browsing it from the [templates](https://mui.com/material-ui/getting-started/templates/) section.
